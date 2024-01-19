@@ -1,0 +1,28 @@
+:root {
+    /* fonts  */
+    --font-weight-light: 200;
+    --font-weight-normal: 400;
+    --font-weight-bold: 600;
+    --font-size-small: .9375rem; /* 15px*/
+
+}
+
+
+
+
+/* utility  */
+.border-red {
+    border-color: hsl(0, 78%, 62%);
+}
+
+.border-cyan {
+    border-color: hsl(180, 62%, 55%);
+}
+
+.border-orange {
+    border-color: hsl(34, 97%, 64%);
+}
+
+.border-blue {
+    border-color: hsl(212, 86%, 64%)
+}
