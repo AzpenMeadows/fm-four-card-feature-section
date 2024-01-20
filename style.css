@@ -3,11 +3,89 @@
     --font-weight-light: 200;
     --font-weight-normal: 400;
     --font-weight-bold: 600;
-    --font-size-small: .9375rem; /* 15px*/
+    --font-size-small: .875rem;
+    /* 14px*/
 
 }
 
+*,
+::before,
+::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
 
+body {
+    font-family: 'Poppins', sans-serif;
+    color: hsl(229, 6%, 66%);
+    border: 1px solid red;
+}
+
+main {
+    padding-block: 5rem;
+    padding-inline: 2rem;
+}
+
+/* header font  */
+h1,
+h2 {
+    font-weight: var(--font-weight-bold);
+    color: hsl(234, 12%, 34%);
+}
+
+/* light font  */
+.hero-heading span,
+.card p {
+    font-weight: var(--font-weight-light);
+}
+
+/* display inline as block  */
+img,
+span {
+    display: block;
+}
+
+/* hero  */
+.hero-wrapper {
+    /* min-height: 25vh; */
+    text-align: center;
+    padding-block: 0 5rem;
+}
+
+.hero-heading {
+    padding-bottom: 1rem;
+}
+
+/* grid  */
+.grid-wrapper {
+    display: grid;
+    gap: 2rem;
+}
+
+/* grid cards  */
+.card {
+    padding-block: 1.5rem;
+    padding-inline: 2rem;
+    border-radius: 5px;
+    border-top: 4px solid;
+    box-shadow: 0 10px 30px -10px hsla(212, 41%, 44%, 0.466)
+}
+
+.card h2 {
+    font-size: 1.3rem;
+}
+
+.card p {
+    font-size: var(--font-size-small);
+}
+
+.card img {
+    margin-block: 2rem 0;
+    margin-inline: auto 0;
+}
+
+/* footer  */
 
 
 /* utility  */
