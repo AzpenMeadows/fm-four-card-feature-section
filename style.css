@@ -3,9 +3,7 @@
     --font-weight-light: 200;
     --font-weight-normal: 400;
     --font-weight-bold: 600;
-    --font-size-small: .875rem;
-    /* 14px*/
-
+    --font-size-small: .875rem; /* 14px*/
 }
 
 *,
@@ -17,12 +15,17 @@
 }
 
 body {
+    min-height: 100dvh;
+    display: flex;
+    flex-direction: column;
     font-family: 'Poppins', sans-serif;
     color: hsl(229, 6%, 66%);
-    border: 1px solid red;
 }
 
 main {
+    max-width: 75rem;
+    min-height: 100%;
+    margin: 0 auto;
     padding-block: 5rem;
     padding-inline: 2rem;
 }
@@ -37,7 +40,8 @@ h2 {
 /* light font  */
 .hero-heading span,
 .card p {
-    font-weight: var(--font-weight-light);
+    /* font-weight: var(--font-weight-light); */
+    font-weight: 300;
 }
 
 /* display inline as block  */
@@ -50,20 +54,33 @@ span {
 .hero-wrapper {
     /* min-height: 25vh; */
     text-align: center;
-    padding-block: 0 5rem;
+    padding-block: 0 6rem;
 }
 
 .hero-heading {
+    font-size: 1.5rem;
+    line-height: 3.25rem;
     padding-bottom: 1rem;
+}
+
+.hero-text {
+    max-width: 34rem;
+    margin: 0 auto;
+    opacity: 85%;
 }
 
 /* grid  */
 .grid-wrapper {
     display: grid;
+    grid-template-areas: 
+    "one"
+    "two"
+    "three"
+    "four";
+    grid-auto-columns: 1fr;
     gap: 2rem;
 }
 
-/* grid cards  */
 .card {
     padding-block: 1.5rem;
     padding-inline: 2rem;
@@ -72,20 +89,67 @@ span {
     box-shadow: 0 10px 30px -10px hsla(212, 41%, 44%, 0.466)
 }
 
+.one {
+    grid-area: one;
+}
+
+.two {
+    grid-area: two;
+}
+
+.three {
+    grid-area: three;
+}
+
+.four {
+    grid-area: four;
+}
+
 .card h2 {
     font-size: 1.3rem;
 }
 
 .card p {
+    margin-block: 1rem 2rem;
     font-size: var(--font-size-small);
 }
 
 .card img {
-    margin-block: 2rem 0;
     margin-inline: auto 0;
 }
 
+@media only screen and (min-width: 678px) {
+    .hero-heading {
+        font-size: 2.25rem;
+    }
+    .grid-wrapper {
+    grid-template-areas: 
+        "one two"
+        "three four"
+    }
+}
+
+@media only screen and (min-width: 860px) {
+    .grid-wrapper {
+        grid-template-areas: 
+            ". two . "
+            "one two four"
+            "one three four"
+            ". three . ";
+        }
+}
+
 /* footer  */
+footer {
+    height: 3rem;
+    justify-self: end;
+    /* position: sticky; */
+    /* top: 100%; */
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
 
 
 /* utility  */
