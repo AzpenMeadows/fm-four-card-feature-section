@@ -1,0 +1,170 @@
+:root {
+    /* fonts  */
+    --font-weight-light: 200;
+    --font-weight-normal: 400;
+    --font-weight-bold: 600;
+    --font-size-small: .875rem; /* 14px*/
+}
+
+*,
+::before,
+::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    min-height: 100dvh;
+    display: flex;
+    flex-direction: column;
+    font-family: 'Poppins', sans-serif;
+    color: hsl(229, 6%, 66%);
+}
+
+main {
+    max-width: 75rem;
+    min-height: 100%;
+    margin: 0 auto;
+    padding-block: 5rem;
+    padding-inline: 2rem;
+}
+
+/* header font  */
+h1,
+h2 {
+    font-weight: var(--font-weight-bold);
+    color: hsl(234, 12%, 34%);
+}
+
+/* light font  */
+.hero-heading span,
+.card p {
+    /* font-weight: var(--font-weight-light); */
+    font-weight: 300;
+}
+
+/* display inline as block  */
+img,
+span {
+    display: block;
+}
+
+/* hero  */
+.hero-wrapper {
+    /* min-height: 25vh; */
+    text-align: center;
+    padding-block: 0 6rem;
+}
+
+.hero-heading {
+    font-size: 1.5rem;
+    line-height: 3.25rem;
+    padding-bottom: 1rem;
+}
+
+.hero-text {
+    max-width: 34rem;
+    margin: 0 auto;
+    opacity: 85%;
+}
+
+/* grid  */
+.grid-wrapper {
+    display: grid;
+    grid-template-areas: 
+    "one"
+    "two"
+    "three"
+    "four";
+    grid-auto-columns: 1fr;
+    gap: 2rem;
+}
+
+.card {
+    padding-block: 1.5rem;
+    padding-inline: 2rem;
+    border-radius: 5px;
+    border-top: 4px solid;
+    box-shadow: 0 10px 30px -10px hsla(212, 41%, 44%, 0.466)
+}
+
+.one {
+    grid-area: one;
+}
+
+.two {
+    grid-area: two;
+}
+
+.three {
+    grid-area: three;
+}
+
+.four {
+    grid-area: four;
+}
+
+.card h2 {
+    font-size: 1.3rem;
+}
+
+.card p {
+    margin-block: 1rem 2rem;
+    font-size: var(--font-size-small);
+}
+
+.card img {
+    margin-inline: auto 0;
+}
+
+@media only screen and (min-width: 678px) {
+    .hero-heading {
+        font-size: 2.25rem;
+    }
+    .grid-wrapper {
+    grid-template-areas: 
+        "one two"
+        "three four"
+    }
+}
+
+@media only screen and (min-width: 860px) {
+    .grid-wrapper {
+        grid-template-areas: 
+            ". two . "
+            "one two four"
+            "one three four"
+            ". three . ";
+        }
+}
+
+/* footer  */
+footer {
+    height: 3rem;
+    justify-self: end;
+    /* position: sticky; */
+    /* top: 100%; */
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+
+
+/* utility  */
+.border-red {
+    border-color: hsl(0, 78%, 62%);
+}
+
+.border-cyan {
+    border-color: hsl(180, 62%, 55%);
+}
+
+.border-orange {
+    border-color: hsl(34, 97%, 64%);
+}
+
+.border-blue {
+    border-color: hsl(212, 86%, 64%)
+}
