@@ -29,8 +29,8 @@ Users should be able to:
 
 ### Links
 
-- Solution URL: [Add solution URL here](https://www.frontendmentor.io/solutions/four-card-feature-section-with-html-and-css-BN5kEGI5e6)
-- Live Site URL: [Add live site URL here](https://github.com/AzpenMeadows/fm-four-card-feature-section)
+- Solution URL: [Frontend Mentor](https://www.frontendmentor.io/solutions/four-card-feature-section-with-html-and-css-BN5kEGI5e6)
+- Live Site URL: [Github Pages](https://azpenmeadows.github.io/fm-four-card-feature-section/)
 
 ## My process
 
